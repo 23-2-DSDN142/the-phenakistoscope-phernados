@@ -1,24 +1,26 @@
-const SLICE_COUNT = 10;
+const SLICE_COUNT = 6;
 
 function setup_pScope(pScope){
   pScope.output_mode(ANIMATED_DISK);
   pScope.scale_for_screen(true);
   pScope.draw_layer_boundaries(true);
-  pScope.set_direction(CCW);
+  pScope.set_direction(CW);
   pScope.set_slice_count(SLICE_COUNT);
-}
+  pScope.load_image("leaf" , "png");
 
+}
+//exprement
 function setup_layers(pScope){
 
-  new PLayer(null, 220);  //lets us draw the whole circle background, ignoring the boundaries
+  new PLayer(null, "#ff9999");  //lets us draw the whole circle background, ignoring the boundaries
 
-  var layer1 = new PLayer(faces);
-  layer1.mode( SWIRL(5) );
-  layer1.set_boundary( 200, 1000 );
+  var expL1 = new PLayer(leaf);
+  expL1.mode( SWIRL(5) );
+  expL1.set_boundary( 200, 1000 );
 
-  var layer2 = new PLayer(squares);
-  layer2.mode( RING );
-  layer2.set_boundary( 0, 400 );
+  var expBOUND = new PLayer(squares);
+  expBOUND.mode( RING );
+  expBOUND.set_boundary( 0, 400 );
 }
 
 function faces(x, y, animation, pScope){
@@ -30,6 +32,13 @@ function faces(x, y, animation, pScope){
   ellipse(-10,-10,10,10); //draw eye
   ellipse(10,-10,10,10); // draw eye
   arc(0,10,20,10,0,180); // draw mouth
+
+}
+
+function leaf(x, y, animation, pScope){
+
+  scale(0.3);
+  pScope.draw_image("leaf",x,y);
 
 }
 
