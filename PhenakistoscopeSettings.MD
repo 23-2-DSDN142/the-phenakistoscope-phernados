@@ -10,7 +10,7 @@ pScope.output_mode(....);
       it only shows one copy and the bounding box of the wedge. everything is scaled up so you can see it easier.
       This mode DOESNT animate (it is a still frame)
 
-    ANIMATED_FRAME
+     
       ANIMATED_FRAME is for prototyping your animation by isolating the single wedge.
       it only shows one copy and the bounding box of the wedge. everything is scaled up so you can see it easier.
       This mode DOES animate
