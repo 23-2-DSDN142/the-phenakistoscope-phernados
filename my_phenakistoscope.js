@@ -1,7 +1,7 @@
 const SLICE_COUNT = 10;
 
 function setup_pScope(pScope) {
-  pScope.output_mode(ANIMATED_DISK);
+  pScope.output_mode(OUTPUT_GIF(1000));
   pScope.scale_for_screen(true);
   pScope.draw_layer_boundaries(false);
   pScope.set_direction(CCW);
@@ -77,7 +77,7 @@ function lillypad(x, y, animation, pScope) {
 
     noStroke()
     fill("#437836")
-    arc(x, y, 900, 800, 20, 360); // slit in lillypad
+    arc(x, y, 900, 800, 20, 340); // slit in lillypad
   }
 }
 
